@@ -10,12 +10,13 @@ const CharacterCards = ({ characters, isLoading }: CharacterCardsProps) => {
 	return isLoading ? (
 		<h2>LOADING</h2>
 	) : (
-		<div className="characterCards">
-			{characters.map((character) => (
-				<Card character={character} />
-			))}
-		</div>
-	);
+			<div className="characterCards">
+				{characters.map((character) => {
+					{console.log(characters)}
+					return <Card key={character.name} character={character} />
+				})}
+			</div>
+		);
 };
 
 export default CharacterCards;

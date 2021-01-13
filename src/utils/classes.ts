@@ -1,14 +1,18 @@
 export class Character {
-	name: string
-	films: string
-	homeworld: string
-	species: string
-  constructor(name: string, films: string, homeworld: string, species: string) {
+	name: string;
+	films: Array<string>;
+	homeworld: string;
+	species: string;
+  constructor(name: string, films: Array<string>, homeworld: string, species: string) {
 		this.name = name
 		this.films = films
 		this.homeworld = homeworld
 		this.species = species
   }
+}
+
+export type UrlToPlanet = {
+	[key: string]: string
 }
 // "name": "Luke Skywalker", 
 // "height": "172", 

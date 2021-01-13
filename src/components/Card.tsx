@@ -8,10 +8,8 @@ type CardProp = {
 const Card = ({character}: CardProp) => {
 	return (
 		<div>
-			{character.name}	
-			{character.films}	
+			{character.name}<br></br>	
 			{character.homeworld}	
-			{character.species}	
 		</div>
 	)
 }

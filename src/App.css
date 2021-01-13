@@ -1,31 +1,55 @@
-html,
-body {
+html, body {
   background: #000 url('image/starfield.jpg') no-repeat center center/cover;
   height: 100vh;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.center{
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header{
+
+header {
   margin-top: 50px;
 }
+
 header img {
   max-width: 700px;
 }
+
 .characterCards {
   display: grid;
   gap: 1em;
-  grid-template-columns:  repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
 }
+
 .card {
-  margin:auto;
+  margin: auto;
   text-align: center;
   background: grey;
   width: 100%;
   height: 200px;
+}
+
+@media only screen and (max-width: 900px) {
+  .characterCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+header img {
+  max-width: 80%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .characterCards {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr;
+  }
+header img {
+  max-width: 100%;
+}
 }
