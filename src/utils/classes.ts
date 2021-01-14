@@ -11,7 +11,7 @@ export class Character {
   }
 }
 
-export type UrlToPlanet = {
+export type UrlsToPlanets = {
 	[key: string]: string
 }
 // "name": "Luke Skywalker", 
