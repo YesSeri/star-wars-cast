@@ -7,9 +7,11 @@ type CardProp = {
 
 const Card = ({character}: CardProp) => {
 	return (
-		<div>
-			{character.name}<br></br>	
-			{character.homeworld}	
+		<div className='card'>
+			{character.name}<hr />
+
+			{character.homeworld}<br/>	
+			{character.species}	
 		</div>
 	)
 }

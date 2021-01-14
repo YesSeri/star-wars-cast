@@ -12,7 +12,6 @@ const CharacterCards = ({ characters, isLoading }: CharacterCardsProps) => {
 	) : (
 			<div className="characterCards">
 				{characters.map((character) => {
-					{console.log(characters)}
 					return <Card key={character.name} character={character} />
 				})}
 			</div>
