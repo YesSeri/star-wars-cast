@@ -1,4 +1,5 @@
-export class Character {
+
+export class FullCharacterInfo {
 	name: string;
 	films: Array<string>;
 	homeworld: string;
@@ -10,7 +11,27 @@ export class Character {
 		this.species = species
   }
 }
-
+export class Character {
+	name: string;
+	height: string;
+	mass: string;
+	hairColor: string;
+	gender: Gender;
+	birthYear: string;
+  constructor(name: string, height: string, mass: string, hairColor: string, gender: Gender, birthYear: string) {
+		this.name = name
+		this.height = height
+		this.mass = mass
+		this.hairColor = hairColor
+		this.gender = gender
+		this.birthYear = birthYear
+  }
+}
+export enum Gender{
+	male = 'male',
+	female = 'female',
+	none = 'n/a'
+}
 export type UrlToPlanet = {
 	[key: string]: string
 }
